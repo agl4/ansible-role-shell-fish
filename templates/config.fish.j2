@@ -1,0 +1,13 @@
+# {{ ansible_managed }}
+{% if fish_vi is defined and fish_vi is sameas true%}
+fish_vi_key_bindings
+{% endif %}
+{% for item in fish_paths %}
+fish_add_path {{ item }}
+{% endfor %}
+{% for item in fish_env %}
+set {{ item.name }} {{ item.value }}
+{% endfor %}
+{% for item in fish_aliases %}
+alias {{ item.name }}={{ item.definition | quote }}
+{% endfor %}

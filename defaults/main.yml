@@ -1,0 +1,13 @@
+---
+fish_vi: true
+fish_paths:
+  - "$HOME/bin"
+fish_env:
+  - name: EDITOR
+    value: vi
+  - name: PAGER
+    value: less
+fish_aliases:
+  - name: h
+    definition: history --max=10
+    description: Short history
