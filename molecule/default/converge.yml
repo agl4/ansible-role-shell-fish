@@ -3,4 +3,4 @@
   hosts: all
   vars:
   roles:
-    - ansible-role-shell-fish
+    - agoloncser.shell_fish
