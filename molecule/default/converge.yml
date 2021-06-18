@@ -3,4 +3,4 @@
   hosts: all
   vars:
   roles:
-    - ansible-role-git
+    - ansible-role-shell-fish
