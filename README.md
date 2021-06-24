@@ -1,6 +1,6 @@
 # Desktop git role
 
-Ansible role to make sure git is installed. Does no more, no less.
+Ansible role to install and configure fish shell. Intended to use on `localhost` for the current user.
 
 ## Requirements
 
