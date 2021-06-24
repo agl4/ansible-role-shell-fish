@@ -11,3 +11,4 @@ fish_aliases:
   - name: h
     definition: history --max=10
     description: Short history
+fish_functions: []
