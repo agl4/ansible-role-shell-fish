@@ -7,7 +7,7 @@
 
 - name: create config dir
   file:
-    path: "{{ ansible_user_dir }}/.config/fish"
+    path: "{{ ansible_user_dir }}/.config/fish/functions"
     mode: "0755"
     state: directory
 
