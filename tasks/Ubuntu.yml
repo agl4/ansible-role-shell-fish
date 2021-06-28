@@ -1,0 +1,16 @@
+---
+- name: install ppa dependencies
+  apt:
+    name:
+      - ca-certificates
+      - gnupg
+      - software-properties-common
+      - apt-transport-https
+    update_cache: true
+  become: "yes"
+
+- name: enable ppa
+  apt_repository:
+    repo: ppa:fish-shell/release-3
+    update_cache: true
+  become: "yes"
