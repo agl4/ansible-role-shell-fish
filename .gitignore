@@ -8,4 +8,4 @@
 ansible-roles
 /.ansible-roles/
 roles-galaxy
-/.cache/
+/.cache
