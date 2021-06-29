@@ -1,4 +1,4 @@
-# Desktop git role
+# Desktop fish role
 
 Ansible role to install and configure fish shell. Intended to use on `localhost` for the current user.
 
