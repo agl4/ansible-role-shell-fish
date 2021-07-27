@@ -11,3 +11,6 @@ set {{ item.name }} {{ item.value }}
 {% for item in fish_aliases %}
 alias {{ item.name }}={{ item.definition | quote }}
 {% endfor %}
+{% for item in fish_config %}
+{{ item }}
+{% endfor %}
