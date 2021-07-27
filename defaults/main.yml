@@ -12,3 +12,4 @@ fish_aliases:
     definition: history --max=10
     description: Short history
 fish_functions: []
+fish_config: []
