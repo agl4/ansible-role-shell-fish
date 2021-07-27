@@ -71,7 +71,7 @@ shell_env:
 
 ## Dependencies
 
-None.
+On Ubuntu it depends on `agoloncser.ubuntu_ppa`.
 
 ## Example Playbook
 
