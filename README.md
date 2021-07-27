@@ -1,6 +1,7 @@
 # Desktop fish role
 
-Ansible role to install and configure fish shell. Intended to use on `localhost` for the current user.
+Ansible role to install and configure fish shell. Intended to use on
+`localhost` for the current user.
 
 ## Requirements
 
@@ -75,10 +76,12 @@ On Ubuntu it depends on `agoloncser.ubuntu_ppa`.
 
 ## Example Playbook
 
+``` yaml
     - hosts: localhost
       vars:
       roles:
          - agoloncser.shell_fish
+```
 
 ## License
 
@@ -86,4 +89,4 @@ BSD
 
 ## Author Information
 
-https://github.com/agoloncser
+[github.com/agoloncser](https://github.com/agoloncser)
