@@ -5,21 +5,55 @@
   become: >-
     {% if ansible_os_family == 'Darwin' %}no{% else %}yes{% endif %}
 
-- name: create config dir
+- name: get all users
+  getent:
+    database: passwd
+    split: ":"
+
+- name: create config dir for specific users
   file:
-    path: "{{ ansible_user_dir }}/.config/fish/functions"
+    path: "{{ getent_passwd[item][4] }}/.config/fish/functions"
     mode: "0755"
     state: directory
+    owner: "{{ item }}"
+    group: "{{ getent_passwd[item][2] }}"
+  with_items: "{{ fish_users }}"
+  when: getent_passwd[item] is defined
 
 - name: configure fish
   template:
     src: templates/config.fish.j2
     mode: "0644"
-    dest: "{{ __fish_directory }}/config.fish"
+    dest: "{{ getent_passwd[item][4] }}/.config/fish/config.fish"
+    owner: "{{ item }}"
+    group: "{{ getent_passwd[item][2] }}"
+  with_items: "{{ fish_users }}"
+  when: getent_passwd[item] is defined
 
 - name: creating functions
   template:
     src: templates/fish_function.j2
     mode: "0644"
-    dest: "{{ __fish_directory }}/functions/{{ item.name }}.fish"
-  with_items: "{{ fish_functions }}"
+    dest: "{{ getent_passwd[item[0]][4] }}/.config/fish/functions/{{ item[1]['name'] }}.fish"
+    owner: "{{ item[0] }}"
+    group: "{{ getent_passwd[item[0]][2] }}"
+  with_nested:
+    - "{{ fish_users }}"
+    - "{{ fish_functions }}"
+  when: getent_passwd[item[0]] is defined
+
+- name: get fish path
+  command: "which fish"
+  register: fish_executable_path
+  ignore_errors: true
+  changed_when: false
+
+- name: set default shell
+  user:
+    name: "{{ item }}"
+    state: present
+    shell: "{{ fish_executable_path.stdout }}"
+  with_items: "{{ fish_users }}"
+  when:
+    - fish_default_shell is true
+    - fish_executable_path.rc == 0
