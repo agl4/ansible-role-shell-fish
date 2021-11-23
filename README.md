@@ -1,7 +1,7 @@
 # Desktop fish role
 
 Ansible role to install and configure fish shell. Intended to use on
-`localhost` for the current user.
+a remote host for the users defined in fish_users.
 
 ## Requirements
 
@@ -69,6 +69,25 @@ shell_env:
   - name: EDITOR
     value: vi
 ```
+
+### `fish_users`
+
+Set users that get the fish config and functions
+
+``` yaml
+fish_users:
+  - root
+  - john
+```
+
+### `fish_default_shell`
+
+Set fish as login shell for fish_users
+
+``` yaml
+fish_default_shell: true
+```
+
 
 ## Dependencies
 
