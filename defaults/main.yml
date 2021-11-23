@@ -13,3 +13,5 @@ fish_aliases:
     description: Short history
 fish_functions: []
 fish_config: []
+fish_users: []
+fish_default_shell: true
