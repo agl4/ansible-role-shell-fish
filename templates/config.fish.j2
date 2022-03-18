@@ -2,9 +2,7 @@
 {% if fish_vi is defined and fish_vi is sameas true%}
 fish_vi_key_bindings
 {% endif %}
-{% for item in fish_paths %}
-fish_add_path {{ item }}
-{% endfor %}
+fish_add_path {{ fish_paths | join(' ') }}
 {% for item in fish_env %}
 set {{ item.name }} {{ item.value }}
 {% endfor %}
