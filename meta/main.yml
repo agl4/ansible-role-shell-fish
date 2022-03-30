@@ -21,11 +21,4 @@ galaxy_info:
     - name: EL
       versions:
         - all
-dependencies:
-  - role: agoloncser.ubuntu_ppa
-    vars:
-      ubuntu_ppa_repositories:
-        - ppa:fish-shell/release-3
-    when:
-      - ansible_distribution == 'Ubuntu'
-      - ansible_distribution_version == '20.10'
+dependencies: []
