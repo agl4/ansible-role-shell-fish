@@ -1,5 +1,7 @@
 # Desktop fish role
 
+[![Molecule testing](https://github.com/agoloncser/ansible-role-shell-fish/actions/workflows/ci.yml/badge.svg)](https://github.com/agoloncser/ansible-role-shell-fish/actions/workflows/ci.yml)
+
 Ansible role to install and configure fish shell. Intended to use on
 `localhost` for the current user.
 
