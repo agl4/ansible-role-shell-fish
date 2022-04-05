@@ -7,3 +7,7 @@
       apt:
         update_cache: "yes"
       when: ansible_distribution == "Debian"
+
+    - name: install
+      package:
+        name: fish

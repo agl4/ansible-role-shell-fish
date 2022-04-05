@@ -1,10 +1,4 @@
 ---
-- name: install
-  package:
-    name: fish
-  become: >-
-    {% if ansible_os_family == 'Darwin' %}no{% else %}yes{% endif %}
-
 - name: create config dir
   file:
     path: "{{ ansible_user_dir }}/.config/fish/functions"
