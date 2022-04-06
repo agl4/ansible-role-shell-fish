@@ -1,18 +1,18 @@
 ---
 - name: create config dir
-  file:
+  ansible.builtin.file:
     path: "{{ ansible_user_dir }}/.config/fish/functions"
     mode: "0755"
     state: directory
 
 - name: configure fish
-  template:
+  ansible.builtin.template:
     src: templates/config.fish.j2
     mode: "0644"
     dest: "{{ __fish_directory }}/config.fish"
 
 - name: creating functions
-  template:
+  ansible.builtin.template:
     src: templates/fish_function.j2
     mode: "0644"
     dest: "{{ __fish_directory }}/functions/{{ item.name }}.fish"

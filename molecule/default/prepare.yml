@@ -4,10 +4,10 @@
   gather_facts: "yes"
   tasks:
     - name: update repos on debian
-      apt:
+      ansible.builtin.apt:
         update_cache: "yes"
       when: ansible_distribution == "Debian"
 
     - name: install
-      package:
+      ansible.builtin.package:
         name: fish
