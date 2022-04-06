@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://www.github.com/agoloncser/ansible-role-shell-fish/compare/v1.1.2...v2.0.0) (2022-04-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* FQCN builtins
+* Do not install the shell itself
+
+### Features
+
+* Do not install the shell itself ([ea74e66](https://www.github.com/agoloncser/ansible-role-shell-fish/commit/ea74e66fc0aeec8e982e667aa3d957c618a296ee))
+* FQCN builtins ([c56c8d0](https://www.github.com/agoloncser/ansible-role-shell-fish/commit/c56c8d03aacbaf41eee702f706436edd92225a34))
+
 ### [1.1.2](https://www.github.com/agoloncser/ansible-role-shell-fish/compare/v1.1.1...v1.1.2) (2022-03-30)
 
 
