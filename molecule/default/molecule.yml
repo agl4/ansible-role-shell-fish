@@ -1,8 +1,12 @@
 ---
 dependency:
   name: galaxy
+  options:
+    requirements-file: collections.yml
 driver:
   name: docker
+lint: |
+  ansible-lint
 platforms:
   - name: instance
     image: "${MOLECULE_IMAGE:-centos:7}"
@@ -12,5 +16,10 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
+  config_options:
+    defaults:
+      callbacks_enabled:
+        ansible.posix.profile_roles, ansible.posix.profile_tasks,
+        ansible.posix.timer, community.general.yaml
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-converge.yml}
