@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/agoloncser/ansible-role-shell-fish/compare/v2.0.0...v2.1.0) (2023-03-01)
+
+
+### Features
+
+* Setup conf.d files similarry to functions ([c46a995](https://github.com/agoloncser/ansible-role-shell-fish/commit/c46a995e9c9656576defd45d45f7e7363351a4d5))
+
 ## [2.0.0](https://github.com/agoloncser/ansible-role-shell-fish/compare/v1.1.2...v2.0.0) (2022-04-06)
 
 
