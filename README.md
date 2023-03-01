@@ -53,16 +53,27 @@ fish_paths:
 
 ### `fish_functions`
 
-Define fish functions:
+Define Fish functions. Will create a file for each entry in `functions/`.
 
 ``` yaml
 fish_functions:
   - name: hh
     definition: |
       function hh --description 'Fuzzy find history'
-        eval (history | fzf --no-color --no-sort --exact)
+        eval (history | fzf $__FZF_OPTIONS)
       end
 ```
+### `fish_confd`
+
+Create Fish conf.d definitions. This will create a file in `conf.d/` for each entry:
+
+``` yaml
+fish_confd:
+  - name: hh
+    definition: |
+        __FZF_OPTIONS="--no-color --no-sort --exact"
+```
+
 
 ### `fish_env`
 

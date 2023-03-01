@@ -11,9 +11,16 @@
     mode: "0644"
     dest: "{{ __fish_directory }}/config.fish"
 
-- name: creating functions
+- name: creating function definitions
   ansible.builtin.template:
     src: templates/fish_function.j2
     mode: "0644"
     dest: "{{ __fish_directory }}/functions/{{ item.name }}.fish"
   with_items: "{{ fish_functions }}"
+
+- name: creating conf.d definitions
+  ansible.builtin.template:
+    src: templates/fish_function.j2
+    mode: "0644"
+    dest: "{{ __fish_directory }}/conf.d/{{ item.name }}.{{ item.extension | default('fish') }}"
+  with_items: "{{ fish_confd }}"
