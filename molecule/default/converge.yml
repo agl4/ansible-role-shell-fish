@@ -3,4 +3,4 @@
   hosts: all
   vars:
   roles:
-    - agoloncser.shell_fish
+    - agl4.shell_fish
