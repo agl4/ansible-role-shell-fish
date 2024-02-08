@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/agl4/ansible-role-shell-fish/compare/v2.1.0...v3.0.0) (2024-02-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* Change username
+
+### Features
+
+* Change username ([1e6465c](https://github.com/agl4/ansible-role-shell-fish/commit/1e6465c2f3ac7d88896cf62089b5d049edd381c6))
+
 ## [2.1.0](https://github.com/agl4/ansible-role-shell-fish/compare/v2.0.0...v2.1.0) (2023-03-01)
 
 
