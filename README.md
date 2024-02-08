@@ -1,6 +1,6 @@
 # Desktop fish role
 
-[![Molecule testing](https://github.com/agoloncser/ansible-role-shell-fish/actions/workflows/ci.yml/badge.svg)](https://github.com/agoloncser/ansible-role-shell-fish/actions/workflows/ci.yml)
+[![Molecule testing](https://github.com/agl4/ansible-role-shell-fish/actions/workflows/ci.yml/badge.svg)](https://github.com/agl4/ansible-role-shell-fish/actions/workflows/ci.yml)
 
 Ansible role to configure fish shell. Intended to use on `localhost`
 for the current user.
@@ -87,7 +87,7 @@ shell_env:
 
 ## Dependencies
 
-On Ubuntu it depends on `agoloncser.ubuntu_ppa`.
+On Ubuntu it depends on `agl4.ubuntu_ppa`.
 
 ## Example Playbook
 
@@ -95,7 +95,7 @@ On Ubuntu it depends on `agoloncser.ubuntu_ppa`.
     - hosts: localhost
       vars:
       roles:
-         - agoloncser.shell_fish
+         - agl4.shell_fish
 ```
 
 ## License
@@ -104,4 +104,4 @@ BSD
 
 ## Author Information
 
-[github.com/agoloncser](https://github.com/agoloncser)
+[github.com/agl4](https://github.com/agl4)
